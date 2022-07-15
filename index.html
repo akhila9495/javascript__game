@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <link rel="shortcut icon" href="https://www.transparentpng.com/thumb/pokemon/C7w2YQ-pokemon-icon-clipart.png"
+        type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+        * {
+            font-family: 'Pokemon Solid', sans-serif;
+
+        }
+
+        body {
+            background-color: #2b2b2c;
+        }
+
+        h2 {
+
+            margin: 0;
+            color: deeppink;
+
+        }
+
+        button {
+            font-size: 20px;
+        }
+    </style>
+    <title>Pokemon Game</title>
+</head>
+
+<body>
+    <div className='container' style="display: inline-block; position: relative;">
+        <div id="battleOverlap" style=" background-color: black;
+            top: 0; 
+            bottom:0;
+            left: 0;
+            right: 0; 
+            position: absolute;
+            opacity: 0; 
+            pointer-events: none;
+            z-index: 10;">
+        </div>
+
+
+
+
+        <canvas></canvas>
+        <div id="userInterface">
+            <div id="battleInfo">
+                <div class="battleStat__Draggle" style="background-color: antiquewhite; 
+             position: absolute;
+             top:50px;
+             left: 50px;
+             border: 4px solid black;
+             width: 250px;
+               ">
+                    <h1 style="color: chartreuse;
+                    font-size: 16px;
+                    padding: 12px;">Draggle</h1>
+                    <div style="position: relative;">
+                        <!-- //healthBar -->
+                        <div style="height: 5px;
+                background-color:#ccc; 
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 4px;
+                margin-right: 4px;">
+
+                        </div>
+                        <div id="enemyHealthBar" style="height: 5px;
+                background-color:green; 
+        
+                margin-bottom: 10px;
+                margin-left: 4px;
+                margin-right: 4px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="battleStat__Emby" style="background-color: antiquewhite; 
+        position: absolute;
+        top:300px;
+        right: 50px;
+        border: 4px solid black;
+        width: 250px;
+        ">
+                    <h1 style="color: rgb(248, 106, 106);
+           font-size: 16px;
+        padding: 12px;">Emby</h1>
+                    <div style="position: relative;">
+                        <!-- //healthBar -->
+                        <div style="height: 5px;
+                background-color:#ccc; 
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 4px;
+                margin-right: 4px;"></div>
+                        <div id="playerHealthBar" style="height: 5px;
+                background-color:green; 
+        
+                margin-bottom: 10px;
+                margin-left: 4px;
+                margin-right: 4px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="battle__info" style="display: flex;
+                                        background-color: yellow; 
+                                        
+                                        position: absolute; 
+                                        bottom: 0;
+                                        left: 0;
+                                        right: 0;
+                                        border-radius:10px 10px 0 0 ;
+                                        border: 4px black solid ;
+                                        height: 138px; 
+                                    ">
+                <div id="dialogueBox" style="position: absolute;
+                            top:0;
+                            bottom:0;
+                            right:0;
+                            left:0;  
+                            background-color:white;
+                            display: none;
+                            cursor: pointer;             
+                ">adsjfvlakn</div>
+                <div id="attacksBox"
+                    style="width: 70%; display:grid; grid-template-columns: repeat(2,1fr); font-size: 18px; cursor: pointer;">
+
+
+                </div>
+                <div style="width: 30%; display:flex; justify-content:center; align-items: center;
+                                        border-left: 4px black solid;">
+                    <h2 id="attackType" style="font-size: 16px;">Attack type</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+        integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./data/audio.js"></script>
+    <script src="./data/battleZone.js"></script>
+    <script src="./data/collision.js"></script>
+
+    <script src="./data/attacks.js"></script>
+    <script src="./data/monster.js"></script>
+    <script src="./classes.js"></script>
+    <script src="./index.js"></script>
+    <script src="./data/battleScene.js"></script>
+
+
+
+
+
+</body>
+
+</html>
