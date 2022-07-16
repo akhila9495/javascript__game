@@ -2,7 +2,7 @@
 
 
 const battleBackgroundImage = new Image()
-battleBackgroundImage.src = '../Game_asset/img/battleBackground.png'
+battleBackgroundImage.src = 'Game_asset/img/battleBackground.png'
 
 const battleBackground = new Sprite({
     position: {
